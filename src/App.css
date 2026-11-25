@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f8f4;
+}
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Landing page with background image */
+.landing-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.45);
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 24px;
+}
+
+.landing_content {
+  color: #fff;
+  text-align: center;
+  max-width: 480px;
+}
+
+.landing_content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.landing_content p {
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+}
+
+.divider {
+  width: 80px;
+  height: 3px;
+  background-color: #4caf50;
+  margin: 0 auto 16px;
+}
+
+.get-started-button {
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.get-started-button:hover {
+  background-color: #388e3c;
+}
+
+.landing-page.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.product-list-container {
+  display: none;
+}
+
+.product-list-container.visible {
+  display: block;
+}
